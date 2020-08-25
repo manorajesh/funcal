@@ -57,13 +57,17 @@ class Main {
       System.out.print(Msg.CARROT);
 
       String character = get.getchar();
-      if (character.equals(Msg.ONE)) {
+      switch (character)
+      {
+        case character.equals(Msg.ONE):
         System.out.format(Msg.ARITHMETIC);
 
         System.out.print(Msg.CARROT);
         character = get.getchar();;
 
-        if (character.equals(Msg.PLUS)) {
+        switch (character)
+        {
+          case character.equals(Msg.PLUS):
           System.out.format(Msg.OP1);
           System.out.print(Msg.CARROT);
 
@@ -77,56 +81,66 @@ class Main {
           double result = cal.add(op1, op2);
 
           System.out.format(Msg.SUM , op1, op2, result);
-        } else if (character.equals(Msg.SUB)) {
+          break;
+
+          case character.equals(Msg.SUB):
           System.out.format(Msg.OP1);
           System.out.print(Msg.CARROT);
 
-          double op1 = get.getdouble();
+          op1 = get.getdouble();
 
           System.out.format(Msg.OP2);
           System.out.print(Msg.CARROT);
 
-          double op2 = get.getdouble();
+          op2 = get.getdouble();
 
-          double result = cal.sub(op1, op2);
+          result = cal.sub(op1, op2);
 
           System.out.format(Msg.DIFF, op1, op2, result);
-        } else if (character.equals(Msg.MULTI)) {
+          break;
+
+          case character.equals(Msg.MULTI):
           System.out.format(Msg.OP1);
           System.out.print(Msg.CARROT);
 
-          double op1 = get.getdouble();
+          op1 = get.getdouble();
 
           System.out.format(Msg.OP2);
           System.out.print(Msg.CARROT);
 
-          double op2 = get.getdouble();
+          op2 = get.getdouble();
 
-          double result = cal.multi(op1, op2);
+          result = cal.multi(op1, op2);
 
           System.out.format(Msg.PRO, op1, op2, result);
-        } else if (character.equals(Msg.DIV)) {
+          break;
+
+          case character.equals(Msg.DIV):
           System.out.format(Msg.OP1);
           System.out.print(Msg.CARROT);
 
-          double op1 = get.getdouble();
+          op1 = get.getdouble();
 
           System.out.format(Msg.OP2);
           System.out.print(Msg.CARROT);
 
-          double op2 = get.getdouble();
+          op2 = get.getdouble();
 
-          double result = cal.div(op1, op2);
+          result = cal.div(op1, op2);
 
           System.out.format(Msg.QUO, op1, op2, result);
-        } 
-      } else if (character.equals(Msg.ZERO)) {
+          break;
+        }
+        break;
+
+        case character.equals(Msg.ZERO):
         System.out.format(Msg.MORE);
         System.out.print(Msg.CARROT);
         
-        character = get.getchar();;
-
-        if (character.equals(Msg.EX)) {
+        character = get.getchar();
+        switch (character)
+        {
+          case character.equals(Msg.EX):
           System.out.format(Msg.OP);
           System.out.print(Msg.CARROT);
 
@@ -135,26 +149,33 @@ class Main {
           int result = cal.factorial(num1);
 
           System.out.format(Msg.FACT, num1, result);
-        } else if (character.equals(Msg.TWO)) {
+          break;
+
+          case character.equals(Msg.TWO):
           System.out.format(Msg.OP);
           System.out.print(Msg.CARROT);
 
-          int num1 = get.getint();
+          num1 = get.getint();
           
-          int result = cal.square(num1);
+          result = cal.square(num1);
 
           System.out.format(Msg.SQUARE, num1, result);
-        } else if (character.equals(Msg.THREE)) {
+          break;
+
+          case character.equals(Msg.THREE):
           System.out.format(Msg.OP);
           System.out.print(Msg.CARROT);
 
-          int num1 = get.getint();
+          num1 = get.getint();
           
-          int result = cal.cube(num1);
+          result = cal.cube(num1);
 
           System.out.format(Msg.CUBE, num1, result);
-        } 
+          break;
+        }
+
       }
+    }
   }
 }
-}
+      
