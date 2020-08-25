@@ -1,9 +1,9 @@
 class Msg {
-    public static final String STARTMSG = "Select one of the following options:\n" +
+    public static final String STARTMSG = "\nSelect one of the following options:\n" +
     "(1) Arithmetic\n" +
     "(0) More\n";
 
-    public static final String ARITHMETIC = "Select one of the following operations:\n" +
+    public static final String ARITHMETIC = "\nSelect one of the following operations:\n" +
     "(+) Addition\n" +
     "(-) Subtraction\n" +
     "(*) Multiplication\n" +
@@ -18,7 +18,7 @@ class Msg {
     public static final String PRO = "Result: %g * %g = %g\n";
     public static final String QUO = "Result: %g / %g = %g\n";
 
-    public static final String MORE = "Select one of the following functions:\n" +
+    public static final String MORE = "\nSelect one of the following functions:\n" +
     "(!) Factorial\n" +
     "(2) Square Root\n" +
     "(3) Cube Root\n";

@@ -12,7 +12,7 @@ class cal {
     return num1 / num2;
   }
   public static double factorial(double num1) {
-    if (num1 <= 0 || (num1 % 2) >= 1)  // if num is 0, then return 1
+    if (num1 <= 0 || (num1 % 2) < 0)  // if num is 0, then return 1
         return 1;
     return num1 * factorial(num1 - 1); // Recursion to find factorial 
   }

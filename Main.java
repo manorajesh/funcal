@@ -56,121 +56,134 @@ class Main {
       System.out.print(Msg.CARROT);
 
       String character = get.getstr();
+      
       switch (character)                              // Checking if Arithmetic or More is selected
       {
-        case Msg.ONE:
-        System.out.format(Msg.ARITHMETIC);
+        default:
+          System.out.println("Invalid request, select 0 or 1");
+          break;
 
-        System.out.print(Msg.CARROT);
-        character = get.getstr();;
+        case Msg.ONE:
+          System.out.format(Msg.ARITHMETIC);
+
+          System.out.print(Msg.CARROT);
+          character = get.getstr();;
 
         switch (character)                            // Checking which operation is selected, with a case for each
         {
           case Msg.PLUS:
-          System.out.format(Msg.OP1);
-          System.out.print(Msg.CARROT);
- 
-          double op1 = get.getdouble();
+            System.out.format(Msg.OP1);
+            System.out.print(Msg.CARROT);
+  
+            double op1 = get.getdouble();
 
-          System.out.format(Msg.OP2);
-          System.out.print(Msg.CARROT);
+            System.out.format(Msg.OP2);
+            System.out.print(Msg.CARROT);
 
-          double op2 = get.getdouble();
+            double op2 = get.getdouble();
 
-          double result = cal.add(op1, op2);
+            double result = cal.add(op1, op2);
 
-          System.out.format(Msg.SUM , op1, op2, result);
-          break;
+            System.out.format(Msg.SUM , op1, op2, result);
+            break;
 
           case Msg.SUB:
-          System.out.format(Msg.OP1);
-          System.out.print(Msg.CARROT);
+            System.out.format(Msg.OP1);
+            System.out.print(Msg.CARROT);
 
-          op1 = get.getdouble();
+            op1 = get.getdouble();
 
-          System.out.format(Msg.OP2);
-          System.out.print(Msg.CARROT);
+            System.out.format(Msg.OP2);
+            System.out.print(Msg.CARROT);
 
-          op2 = get.getdouble();
+            op2 = get.getdouble();
 
-          result = cal.sub(op1, op2);
+            result = cal.sub(op1, op2);
 
-          System.out.format(Msg.DIFF, op1, op2, result);
-          break;
+            System.out.format(Msg.DIFF, op1, op2, result);
+            break;
 
           case Msg.MULTI:
-          System.out.format(Msg.OP1);
-          System.out.print(Msg.CARROT);
+            System.out.format(Msg.OP1);
+            System.out.print(Msg.CARROT);
 
-          op1 = get.getdouble();
+            op1 = get.getdouble();
 
-          System.out.format(Msg.OP2);
-          System.out.print(Msg.CARROT);
+            System.out.format(Msg.OP2);
+            System.out.print(Msg.CARROT);
 
-          op2 = get.getdouble();
+            op2 = get.getdouble();
 
-          result = cal.multi(op1, op2);
+            result = cal.multi(op1, op2);
 
-          System.out.format(Msg.PRO, op1, op2, result);
-          break;
+            System.out.format(Msg.PRO, op1, op2, result);
+            break;
 
           case Msg.DIV:
-          System.out.format(Msg.OP1);
-          System.out.print(Msg.CARROT);
+            System.out.format(Msg.OP1);
+            System.out.print(Msg.CARROT);
 
-          op1 = get.getdouble();
+            op1 = get.getdouble();
 
-          System.out.format(Msg.OP2);
-          System.out.print(Msg.CARROT);
+            System.out.format(Msg.OP2);
+            System.out.print(Msg.CARROT);
 
-          op2 = get.getdouble();
+            op2 = get.getdouble();
 
-          result = cal.div(op1, op2);
+            result = cal.div(op1, op2);
 
-          System.out.format(Msg.QUO, op1, op2, result);
-          break;
+            System.out.format(Msg.QUO, op1, op2, result);
+            break;
+
+          default:
+            System.out.println("Invalid request, select an available option");
+            break;
         }
         break;
 
         case Msg.ZERO:
-        System.out.format(Msg.MORE);
-        System.out.print(Msg.CARROT);
-        
-        character = get.getstr();
-        switch (character)
+          System.out.format(Msg.MORE);
+          System.out.print(Msg.CARROT);
+          
+          character = get.getstr();
+          switch (character)
         {
           case Msg.EX:                                // Checking which operation is selected
-          System.out.format(Msg.OP);
-          System.out.print(Msg.CARROT);
+            System.out.format(Msg.OP);
+            System.out.print(Msg.CARROT);
 
-          double num1 = get.getdouble();
-          
-          double result = cal.factorial(num1);
+            double num1 = get.getdouble();
+            
+            double result = cal.factorial(num1);
 
-          System.out.format(Msg.FACT, num1, result);
-          break;
+            System.out.format(Msg.FACT, num1, result);
+            break;
 
           case Msg.TWO:
-          System.out.format(Msg.OP);
-          System.out.print(Msg.CARROT);
+            System.out.format(Msg.OP);
+            System.out.print(Msg.CARROT);
 
-          num1 = get.getdouble();
-          
-          result = cal.square(num1);
+            num1 = get.getdouble();
+            
+            result = cal.square(num1);
 
-          System.out.format(Msg.SQUARE, num1, result);
-          break;
+            System.out.format(Msg.SQUARE, num1, result);
+            break;
 
           case Msg.THREE:
-          System.out.format(Msg.OP);
-          System.out.print(Msg.CARROT);
+            System.out.format(Msg.OP);
+            System.out.print(Msg.CARROT);
 
-          num1 = get.getdouble();
-          
-          result = cal.cube(num1);
+            num1 = get.getdouble();
+            
+            result = cal.cube(num1);
 
-          System.out.format(Msg.CUBE, num1, result);
-          break;
+            System.out.format(Msg.CUBE, num1, result);
+            break;
+
+          default:
+            System.out.println("Invalid request, select an available option");
+            break;
         }
 
       }
