@@ -11,13 +11,15 @@ class cal {
   public static double div(double num1, double num2) {
     return num1 / num2;
   }
-  public static int factorial(int num1) {
-    return num1;
+  public static double factorial(double num1) {
+    if (num1 <= 0 || (num1 % 2) >= 1)  // if num is 0, then return 1
+        return 1;
+    return num1 * factorial(num1 - 1); // Recursion to find factorial 
   }
-  public static int square(int num1) {
+  public static double square(double num1) {
     return num1 * num1;
   }
-  public static int cube(int num1) {
+  public static double cube(double num1) {
     return num1 * num1 * num1;
   }
 }

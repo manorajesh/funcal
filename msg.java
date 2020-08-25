@@ -23,11 +23,11 @@ class Msg {
     "(2) Square Root\n" +
     "(3) Cube Root\n";
 
-    public static final String OP = "Enter operand:";
+    public static final String OP = "Enter operand:\n";
 
-    public static final String FACT = "Result: %d! = %d\n";
-    public static final String SQUARE = "Result: %d^2 = %d\n";
-    public static final String CUBE = "Result: %d^3 = %d\n";
+    public static final String FACT = "Result: %g! = %g\n";
+    public static final String SQUARE = "Result: %g^2 = %g\n";
+    public static final String CUBE = "Result: %g^3 = %g\n";
 
     public static final String ONE = "1";
     public static final String PLUS = "+";
